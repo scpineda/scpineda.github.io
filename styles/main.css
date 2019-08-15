@@ -1,0 +1,17 @@
+/* Custom CSS */
+
+body {
+	background-color: DimGray;
+	color: white;
+	text-align: center;
+	border-style: groove;
+}
+
+h1 {
+	font-family: "Helvetica", sans-serif;
+}
+
+p {
+	font-family: verdana;
+	font-size: 20px;
+}
