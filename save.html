@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html>
+<link rel="stylesheet" type="text/css" href="styles/main.css">
+<head>
+	<title>Spell Save DC</title>
+</head>
+
+<body>
+	<h1>Enter the DC to make and then your mod.</h1>
+	<p>Knowing your proficiency and mod, see your chances of making the DC.</p>
+	
+	<form id="form1" onsubmit="calc();return false">
+	  Spell Save:<br>
+	  <input type="text" name="save" id="save" required><br>
+	  Ability mod:<br>
+	  <input type="text" name="mod" id="mod" required><br>
+	  Proficiency Bonus:<br>
+	  <input type ="text" name="bonus" id="bonus"><br>
+	  
+	  <input type="submit" value="Submit">		
+	</form>
+	
+	<br>
+	<p id="result"></p>
+	
+	<script>
+		function calc()
+		{	
+			var save = parseInt(document.getElementById("save").value, 10);;
+			var mod = parseInt(document.getElementById("mod").value, 10);
+			var bonus = parseInt(document.getElementById("bonus").value, 10);
+			
+			var res = ((20 - (save - (mod + bonus))) / 20) * 100;
+			
+			document.getElementById("result").innerHTML = "Your chances of making the save are " + res + "%."
+		}
+	</script>
+</body>
+</html>
