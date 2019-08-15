@@ -25,7 +25,7 @@
 			var ac = document.getElementById("ac").value;
 			var mod = document.getElementById("mod").value;
 			
-			var res = ((20 - (ac - mod)) / 20) * 100;
+			var res = (((20 - (ac - mod)) / 20) * 100).toPrecision();
 			
 			document.getElementById("result").innerHTML = "Your chances of hitting are " + res + "%."
 		}
